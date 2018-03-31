@@ -1,3 +1,5 @@
+Trying to replicate this example: http://chessboardjs.com/examples#1000
+
 Looking for help to make this work.
 
 ```
