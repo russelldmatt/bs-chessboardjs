@@ -1,18 +1,13 @@
-# Basic Reason Template
-
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
-
-# Build
-```
-npm run build
-```
-
-# Build + Watch
+Looking for help to make this work.
 
 ```
-npm run start
+# clone repo
+$ yarn install
+$ yarn build
+$ yarn run webpack
 ```
 
+Hopefully at that point you will have a file `/build/Index.js`.
 
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+Then, open /build/index.html in browser.  Doesn't current work.  Any
+help appreciated!
