@@ -9,4 +9,12 @@ module.exports = {
     publicPath: outputDir,
     filename: 'Index.js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [ 'file-loader' ]
+      }
+    ]
+  }
 };

@@ -1,10 +1,19 @@
-Js.log("Hello, BuckleScript and Reason!");
-
-Js.log("foo");
-
 type board;
 
-[@bs.module "chessboardjs"]
-external chessboard : string => board = "ChessBoard";
+type cfg;
 
-chessboard("board");
+let cfg: cfg = [%raw
+  {|
+{
+  draggable: true,
+  pieceTheme: '../node_modules/chessboardjs/www/img/chesspieces/wikipedia/{piece}.png',
+  position: 'start'
+}
+|}
+];
+
+[@bs.module] external chessboard : (string, cfg) => board = "chessboardjs";
+
+chessboard("board1", cfg);
+
+chessboard("board2", cfg);
