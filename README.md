@@ -1,15 +1,10 @@
-Trying to replicate this example: http://chessboardjs.com/examples#1000
+Disclaimer: Very much a work in progress.
 
-Looking for help to make this work.
+Quickstart to get a simple example working:
 
 ```
-# clone repo
-$ yarn install
-$ yarn build
-$ yarn run webpack
+NAME=bs-chessboardjs # change the name if you want
+git clone https://github.com/russelldmatt/bs-chessboardjs.git $NAME && cd $NAME
+yarn all && yarn build && yarn run webpack
+open build/index.html
 ```
-
-Hopefully at that point you will have a file `/build/Index.js`.
-
-Then, open /build/index.html in browser.  Doesn't current work.  Any
-help appreciated!
