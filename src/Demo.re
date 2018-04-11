@@ -105,10 +105,10 @@ let cfg: cfg = {
       Js.log(color);
     }),
   "orientation": Js.Nullable.null,
-  "pieceTheme":
-    Js.Nullable.return(
-      "../node_modules/chessboardjs/www/img/chesspieces/wikipedia/{piece}.png",
-    ),
+  "pieceTheme": Js.Nullable.null,
+  /* Js.Nullable.return( */
+  /*   "../node_modules/chessboardjs/www/img/chesspieces/wikipedia/{piece}.png", */
+  /* ), */
   "position": Js.Nullable.return("start"),
   "showNotation": Js.Nullable.null,
   "snapSpeed": Js.Nullable.null,
