@@ -17,12 +17,11 @@ type speed = int;
 
 type cfg = {
   .
-  "draggable": Js.nullable(Js.boolean), /* false */
+  "draggable": Js.nullable(bool), /* false */
   "dropOffBoard": Js.nullable(string), /* 'snapback' */
   "position": Js.nullable(string), /* n/a */
   "onChange": Js.nullable((position, position) => unit),
-  "onDragStart":
-    Js.nullable((square, piece, position, orientation) => Js.boolean),
+  "onDragStart": Js.nullable((square, piece, position, orientation) => bool),
   "onDragMove":
     Js.nullable(
       (square, square, square, piece, position, orientation) => unit,
@@ -38,8 +37,8 @@ type cfg = {
   /* "onSnapbackEnd" */
   /* "onSnapEnd" */
   "orientation": Js.nullable(color),
-  "showNotation": Js.nullable(Js.boolean),
-  "sparePieces": Js.nullable(Js.boolean),
+  "showNotation": Js.nullable(bool),
+  "sparePieces": Js.nullable(bool),
   /* "showErrors" */
   "pieceTheme": Js.nullable(string), /* or function */
   "appearSpeed": Js.nullable(speed),
@@ -78,7 +77,7 @@ type cfg = {
 /* ]; */
 let cfg: cfg = {
   "appearSpeed": Js.Nullable.null,
-  "draggable": Js.Nullable.return(Js.Boolean.to_js_boolean(true)),
+  "draggable": Js.Nullable.return(true),
   "dropOffBoard": Js.Nullable.null,
   "moveSpeed": Js.Nullable.null,
   "onChange":
@@ -91,7 +90,7 @@ let cfg: cfg = {
     Js.Nullable.return((square, piece, position, boardOrientation) => {
       Js.log("on drag start");
       Js.log(piece);
-      piece.[0] === 'w' |> Js.Boolean.to_js_boolean;
+      piece.[0] === 'w';
     }),
   "onDragMove": Js.Nullable.null,
   "onDrop":
